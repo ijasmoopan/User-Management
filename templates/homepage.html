@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta http-equiv="refresh" content="3" /> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <script>
+        history.pushState(null, document.title, location.href);
+        window.addEventListener('popstate', function (event) {
+          history.pushState(null, document.title, location.href);
+        });
+        console.log("Done");
+      </script>
+    
+    <title>Document</title>
+</head>
+<body onunload="">
+    <h2>Welcome {{.user}}</h2>
+    <br>
+    <!-- <h2>Welcome </h2> -->
+    <!-- <a href="/logout">Logout</a> -->
+    <form action="/logout" method="get">
+        <input type="submit" value="Log Out" name="logout">
+    </form>
+
+    <!-- <script type="text/javascript">
+        function preventbackbutton() { window.history.forward(); }
+        setTimeout("preventbackbutton()", 0);
+        window.onunload = function () { null };
+    </script> -->
+
+    <!-- <script>
+        window.addEventListener( "pageshow", function ( event ) {
+            var historyTraversal = event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
+             if ( historyTraversal ) {
+                // Handle page restore.
+                window.location.reload();
+            }
+        });
+    </script> -->
+    <!-- <script>window.location.reload();</script> -->
+
+<!-- <script>window.onload = function() {
+	if(!window.location.hash) {
+		window.location = window.location + '#loaded';
+		window.location.reload();
+	}
+}</script> -->
+<!-- <script>
+    function loadOnce(){
+
+        window.location.reload()
+    }
+    let a = 1;
+    if(a == 1){
+        loadOnce();
+        a++;
+    }
+</script> -->
+
+
+
+</body>
+</html>

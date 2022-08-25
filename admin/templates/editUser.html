@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <h1 align="center" style="width: 100%; margin-top: 3rem; margin-bottom: 3rem; margin: auto;">Edit User Details</h1>
+    <div class="tab-pane fade show active" style="width: 20%; margin: auto;" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+        <form action="/userlist/edit/{{.UserID}}/editing" method="POST">
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="text" value="{{.Username}}" name="username" placeholder="Username" id="loginName" class="form-control" style="margin-top:3rem;" />
+          </div>
+    
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <input type="password" value="{{.Password}}" name="password" placeholder="Password" id="loginPassword" class="form-control" />
+          </div>
+    
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block mb-4" style="width:19rem;">Edit</button>
+
+        </form>
+      </div>
+</body>
+</html>
